@@ -3,15 +3,13 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<t:template title="Tela Inicial">
+<t:template title="404">
     <jsp:body>
-        <h1>
-            Controle de Ordens de Serviço
-        </h1>
-
-        <div class="row">
-            <a href="adicionar-os">Adicionar Ordem de Serviço</a>
-            <a href="clientes">Clientes</a>
+        <div class="page-error row justify-content-center">
+            <div class="col-5 row justify-content-center">
+                <img src="assets/resources/images/erro.png" alt="" width="400">
+            </div>
         </div>
     </jsp:body>
 </t:template>
+

@@ -1,4 +1,4 @@
-package br.edu.utfpr.controlos;
+package br.edu.utfpr.controlos.controller;
 
 import java.io.*;
 import javax.servlet.ServletException;
@@ -6,7 +6,7 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
 @WebServlet(name = "helloServlet", value = "/hello-servlet")
-public class HelloServlet extends HttpServlet {
+public class HelloController extends HttpServlet {
     private String message;
 
     public void init() {
@@ -18,7 +18,7 @@ public class HelloServlet extends HttpServlet {
 
         // Hello
         request.setAttribute("message", message);
-        request.getRequestDispatcher("/index.jsp").forward(request, response);
+        request.getRequestDispatcher("/index.jsp"). forward(request, response);
     }
 
     public void destroy() {

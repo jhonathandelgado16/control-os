@@ -1,0 +1,17 @@
+.card-os {
+    background-color: #c8c8c8;
+    border-left: #3a3a3a 5px solid;
+    padding: 10px;
+    -webkit-box-shadow: 10px 10px 18px -7px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 18px -7px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 18px -7px rgba(0,0,0,0.75);
+}
+
+.card-os > div {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.card-os > div > strong {
+    color: #3a3a3a;
+}
