@@ -7,7 +7,7 @@
     <jsp:body>
         <div class="page-error row justify-content-center">
             <div class="col-5 row justify-content-center">
-                <img src="assets/resources/images/erro.png" alt="" width="400">
+                <img src="assets/resources/images/404.png" alt="" width="400">
             </div>
         </div>
     </jsp:body>

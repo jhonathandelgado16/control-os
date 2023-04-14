@@ -38,12 +38,18 @@
                         <img class="navbar-logo" src="assets/resources/images/logo.png">
                     </a>
                     <div class="col-9">
-                        <div class="row justify-content-end">
-                            <div class="col-2">
-                                <a class="nav-link" href="">Home</a>
+                        <div class="row justify-content-end menu">
+                            <div class="col-2 text-center">
+                                <a class="nav-link" href="/control-os">PÁGINA INICIAL</a>
                             </div>
-                            <div class="col-2">
-                                <a class="nav-link" href="">Clientes</a>
+                            <div class="col-2 text-center">
+                                <a class="nav-link" href="adicionar-os">ADICIONAR OS</a>
+                            </div>
+                            <div class="col-2 text-center">
+                                <a class="nav-link" href="listar-os">LISTAR OS</a>
+                            </div>
+                            <div class="col-2 text-center">
+                                <a class="nav-link" href="clientes">CLIENTES</a>
                             </div>
                         </div>
                     </div>
@@ -67,12 +73,13 @@
     </div>
     <div class="footer-copyright">
         <div class="container text-center">
-            &#169; Copyright <span id="year"></span> - Todos os direitos
+            &#169; Copyright <span id="year"></span> Control OS - Todos os direitos
             reservados
         </div>
     </div>
 </footer>
 <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script src="assets/libraries/jquery.mask.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
 <script src="assets/resources/scripts/index.js"></script>
 </body>

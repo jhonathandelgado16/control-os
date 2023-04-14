@@ -1,10 +1,12 @@
 .card-os {
+    margin-top: 10px;
+    margin-bottom: 10px;
     background-color: #c8c8c8;
-    border-left: #3a3a3a 5px solid;
+    border-left: #545454 5px solid;
     padding: 10px;
-    -webkit-box-shadow: 10px 10px 18px -7px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 18px -7px rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 18px -7px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -1px 1px 5px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 1px 5px -2px rgba(0,0,0,0.75);
+    box-shadow: -1px 1px 5px -2px rgba(0,0,0,0.75);
 }
 
 .card-os > div {
@@ -13,5 +15,47 @@
 }
 
 .card-os > div > strong {
-    color: #3a3a3a;
+    color: #545454;
+}
+
+h1 {
+    color: #545454;
+    font-family: 'Calibri';
+    font-size: 30px;
+    font-weight: bold;
+}
+
+h2 {
+    color: #545454;
+    font-size: 18px;
+}
+
+h4 {
+    color: #545454;
+    font-size: 12px;
+}
+
+h3 {
+    font-size: 23px;
+    background-color: #2b2f32;
+    color: #fff;
+}
+
+.nav-link {
+    font-size: 16px;
+    color: #2b2f32;
+    font-weight: bold;
+    font-family: 'Corbel';
+}
+
+.nav-link:hover {
+    font-size: 17px;
+}
+
+.card-list > h2 {
+    font-size: 15px !important;
+}
+
+.card-list > input {
+    font-size: 15px !important;
 }

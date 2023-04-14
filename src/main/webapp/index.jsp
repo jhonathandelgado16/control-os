@@ -5,13 +5,22 @@
 
 <t:template title="Tela Inicial">
     <jsp:body>
-        <h1>
-            Controle de Ordens de Serviço
-        </h1>
+        <div class="card-title row justify-content-end">
+            <h1 class="col-10">
+                Controle de Ordens de Serviço
+            </h1>
 
-        <div class="row">
-            <a href="adicionar-os">Adicionar Ordem de Serviço</a>
-            <a href="clientes">Clientes</a>
+            <div class="col-1 text-center row justify-content-end">
+                <div class="col-12">
+                    <h3 class="text-center">${counterOS}</h3>
+                    <h4 class="text-center">OS REALIZADAS</h4>
+                </div>
+            </div>
         </div>
+
+        <div class="row justify-content-center">
+            <a class="col-6 btn btn-secondary" href="adicionar-os">Adicionar Ordem de Serviço</a>
+        </div>
+
     </jsp:body>
 </t:template>

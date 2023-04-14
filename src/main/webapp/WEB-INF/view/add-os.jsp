@@ -5,31 +5,34 @@
 
 <t:template title="Adicionar OS">
     <jsp:body>
-        <h1>Adicionar ordens de serviço</h1>
+        <h1 class="text-center">Adicionar ordens de serviço</h1>
 
-        <form action="" class="justify-content-center row" method="post">
+        <form action="adicionar-os" class="justify-content-center row" method="post">
             <div class="col-8 row justify-content-center card-os">
-                <div class="col-4">
-                    <strong>OS Nº</strong>
-                    <input type="number" readonly name="id" class="form-control col-2">
-                </div>
+
                 <div class="col-4">
                     <strong>Data do Serviço</strong>
-                    <input type="date" name="date_service" class="form-control">
+                    <input type="date" name="date_service" class="form-control" REQUIRED>
                 </div>
                 <div class="col-4">
                     <strong>Dias de Garantia</strong>
-                    <input type="text" name="days_guarantee" class="form-control">
+                    <input type="text" id="input-guarantee" name="days_guarantee" class="form-control" REQUIRED>
                 </div>
 
                 <div class="col-6">
                     <strong>Serviço Prestado</strong>
-                    <input type="text" name="service" class="form-control">
+                    <input type="text" name="service" class="form-control" REQUIRED>
                 </div>
                 <div class="col-6">
                     <strong>Cliente</strong>
-                    <select name="id_client" id="" class="form-select">
+                    <select name="id_client" id="select-client" class="form-select" REQUIRED>
+
                         <option value="">Selecione o Cliente</option>
+                        <c:if test="${not empty clients}">
+                        <c:forEach var="client" items="${clients}">
+                            <option value="${client.id_client}">${client.name}</option>
+                        </c:forEach>
+                        </c:if>
                     </select>
                 </div>
                 <div class="col-12">
@@ -38,9 +41,20 @@
                 </div>
 
                 <div class="col-6">
-                    <button type="button" class="btn btn-secondary col-10">CADASTRAR</button>
+                    <button type="submit" class="btn btn-secondary col-10">CADASTRAR</button>
                 </div>
             </div>
         </form>
+
+        <script>
+        window.onload =  function (){
+            $('#input-guarantee').mask('000');
+
+            $('#select-client').change(function (){
+                localStorage['last-client'] = $(this).find(':selected').text();
+            });
+        }
+        </script>
+
     </jsp:body>
 </t:template>

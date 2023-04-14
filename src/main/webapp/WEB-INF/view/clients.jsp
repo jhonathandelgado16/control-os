@@ -5,42 +5,52 @@
 
 <t:template title="Adicionar OS">
     <jsp:body>
-        <h1>Clientes</h1>
+        <h1 class="text-center">Clientes</h1>
 
-        <form action="" class="justify-content-center row" method="post">
-            <div class="col-8 row justify-content-center card-os">
-                <div class="col-4">
-                    <strong>OS Nº</strong>
-                    <input type="number" readonly name="id" class="form-control col-2">
-                </div>
-                <div class="col-4">
-                    <strong>Data do Serviço</strong>
-                    <input type="date" name="date_service" class="form-control">
-                </div>
-                <div class="col-4">
-                    <strong>Dias de Garantia</strong>
-                    <input type="text" name="days_guarantee" class="form-control">
-                </div>
+        <div class="row">
+            <form action="clientes" class="col-4 justify-content-center row" method="post">
+                <div class=" row justify-content-center card-os">
+                    <h2>Cadastrar novo cliente</h2>
+                    <div class="col-10">
+                        <strong>Nome Completo</strong>
+                        <input type="text" placeholder="Ex: Christopher Julius Rock III" name="name" class="form-control" required>
+                    </div>
+                    <div class="col-10">
+                        <strong>Contato</strong>
+                        <input id="contact" type="text" placeholder="Ex: 4002-8922" name="contact" class="form-control" required>
+                    </div>
 
-                <div class="col-6">
-                    <strong>Serviço Prestado</strong>
-                    <input type="text" name="service" class="form-control">
+                    <div class="col-6">
+                        <button type="submit" class="btn btn-secondary col-10">CADASTRAR</button>
+                    </div>
                 </div>
-                <div class="col-6">
-                    <strong>Cliente</strong>
-                    <select name="id_client" id="" class="form-select">
-                        <option value="">Selecione o Cliente</option>
-                    </select>
-                </div>
-                <div class="col-12">
-                    <strong>Descrição</strong>
-                    <textarea name="description" id="" rows="3" class="form-control"></textarea>
-                </div>
+            </form>
 
-                <div class="col-6">
-                    <button type="button" class="btn btn-secondary col-10">CADASTRAR</button>
-                </div>
+            <div class="offset-1 col-7">
+                <table class="table text-center">
+                    <thead>
+                    <th> Nome </th>
+                    <th> Contato </th>
+                    </thead>
+                    <tbody>
+                    <c:if test="${not empty clients}">
+                        <c:forEach var="client" items="${clients}">
+                            <tr>
+                                <td>${client.name}</td>
+                                <td>${client.contact}</td>
+                            </tr>
+                        </c:forEach>
+                    </c:if>
+                    </tbody>
+                </table>
             </div>
-        </form>
+            </div>
+
+        <script>
+            window.onload =  function (){
+                $('#contact').mask('(00) 0000-0000');
+            }
+        </script>
+
     </jsp:body>
 </t:template>
