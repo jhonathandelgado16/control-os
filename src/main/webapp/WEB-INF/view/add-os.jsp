@@ -16,28 +16,29 @@
                 </div>
                 <div class="col-4">
                     <strong>Dias de Garantia</strong>
-                    <input type="text" id="input-guarantee" name="days_guarantee" class="form-control" REQUIRED>
+                    <input type="text" id="input-guarantee" placeholder="Ex: 30" name="days_guarantee" class="form-control" REQUIRED>
                 </div>
-
-                <div class="col-6">
-                    <strong>Serviço Prestado</strong>
-                    <input type="text" name="service" class="form-control" REQUIRED>
-                </div>
-                <div class="col-6">
+                <div class="col-4">
                     <strong>Cliente</strong>
                     <select name="id_client" id="select-client" class="form-select" REQUIRED>
 
                         <option value="">Selecione o Cliente</option>
                         <c:if test="${not empty clients}">
-                        <c:forEach var="client" items="${clients}">
-                            <option value="${client.id_client}">${client.name}</option>
-                        </c:forEach>
+                            <c:forEach var="client" items="${clients}">
+                                <option value="${client.id_client}">${client.name}</option>
+                            </c:forEach>
                         </c:if>
                     </select>
                 </div>
+
+                <div class="col-12">
+                    <strong>Serviço Prestado</strong>
+                    <input type="text" name="service" placeholder="Ex: Troca de Óleo" class="form-control" REQUIRED>
+                </div>
+
                 <div class="col-12">
                     <strong>Descrição</strong>
-                    <textarea name="description" id="" rows="3" class="form-control"></textarea>
+                    <textarea name="description" id="" rows="3" class="form-control" placeholder="Ex: Troca de Óleo realizada no veículo do Cliente, sendo utilizados 3 L de Óleo Sintético"></textarea>
                 </div>
 
                 <div class="col-6">

@@ -49,6 +49,13 @@ public class AddOsController extends HttpServlet {
             counterOS++;
             getServletContext().setAttribute(Constants.COUNTER_OS, counterOS);
 
+            Integer counterOsSession = (Integer) request.getSession(true).getAttribute(Constants.COUNTER_OS_SESSION);
+            if(counterOsSession == null){
+                counterOsSession = 0;
+            }
+            counterOsSession++;
+            request.getSession(true).setAttribute(Constants.COUNTER_OS_SESSION, counterOsSession);
+
             ServiceOrder os = new ServiceOrder(service, description, dateService, daysInt, idClientLong);
 
             //persiste no banco de dados

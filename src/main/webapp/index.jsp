@@ -16,6 +16,16 @@
                     <h4 class="text-center">OS REALIZADAS</h4>
                 </div>
             </div>
+            <c:if test="${not empty counterOsSession}">
+            <div class="col-1 text-center row justify-content-end">
+                <div class="col-12">
+
+                    <h3 class="text-center">${counterOsSession}</h3>
+                    <h4 class="text-center">OS da Sessão</h4>
+
+                </div>
+            </div>
+            </c:if>
         </div>
 
         <div class="row justify-content-center">

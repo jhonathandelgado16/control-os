@@ -23,9 +23,9 @@
         <div class="row justify-content-center">
           <div class="col-6 card-os row">
             <form action="" class="row justify-content-center card-list">
-              <h2 class="col-6 text-left">#${os.id_service_order}</h2>
+              <h2 class="col-6 text-left numero-os">Ordem de Serviço #${os.id_service_order}</h2>
               <h2 class="col-6">
-                <input type="date" value="${os.date_service}" class="form-control text-center" readonly>
+                <input type="date" value="${os.date_service}" class="form-control text-center date" readonly>
               </h2>
               <h2 class="col-12 text-left">Cliente: ${os.id_client}</h2>
               <h2 class="col-12 text-left">Serviço Prestado: ${os.service}</h2>

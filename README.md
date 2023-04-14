@@ -29,7 +29,7 @@
 - [x] Uso de plugin JQuery
 ### JPA
 - [x] No mínimo 2 entidades
-- [ ] Operações de CRUD.
+- [x] Operações de CRUD.
 
 ## Observações
 
